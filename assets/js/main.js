@@ -29,22 +29,7 @@ $(function(){
             })
 
 
-            /**
-                 * @인트로스크롤모션
-                 * scrub으로 텍스트 무빙 조정
-                 */
-             bdboxMotion = gsap.timeline({
-                scrollTrigger:{
-                    trigger:".sc-intro",
-                    start:"0% 100%",
-                    end:"100% 0%",
-                    scrub:1,
-                },
-            })
-            bdboxMotion
-            .addLabel('a')
-            .to('.sc-banner',{x:-1000, rotate:-10},'a')
-            .from('.sc-intro .boder-scroll',{y:-1000},'a')
+            
 
             /**
                  * @프로젝트stagger
@@ -70,7 +55,25 @@ $(function(){
             
         },
         // medium
-        "(min-width: 768px) and (max-width: 1024px)": function() {
+        "(min-width: 768px)": function() {
+            /**
+                 * @화면스크롤고정
+                 * 위 영역(.sc-about) 뒤에 숨어있다가 스크롤하면 나타나기
+                 */
+             gsap.set('.sc-works .text-box',{
+                y:-800
+            })
+            gsap.to('.sc-works .text-box',{
+                scrollTrigger:{
+                    trigger:".sc-works",
+                    start:"0% 100%",
+                    end:"0% 0%",
+                    scrub:0,
+                },
+                ease:'none',
+                y:0,
+                
+            })
             
             /**
                  * @SplitType텍스트슬라이드
@@ -91,11 +94,50 @@ $(function(){
                  stagger: 0.1
              })    
             
+             /**
+                 * @shape3d회전
+                 * 스크롤할때 한바퀴 회전하는 shape 구현
+                 * @텍스트fill모션
+                 * background-position-X로 0%부터100%까지 채워지는 모션
+                 */
+              gsap.set('.sc-works .shape-box',{opacity:0,rotate:360, rotateY:180, scale:3})
+              worksPin = gsap.timeline({
+                  scrollTrigger:{
+                      trigger:".sc-works",
+                      start:"0%",
+                      end:"100%",
+                      scrub:0,
+                      pin:true,
+                  }
+              })
+              worksPin
+              .addLabel('a')
+              .to('.sc-works .shape-box',{opacity:1,rotate:0, rotateY:0, scale:1},'a')
+              .to('.sc-works .title',{backgroundPositionX:'0%'},'a')
             
         },
         // small
         "(max-width: 767px)": function() {
-            
+            /**
+             * 모바일용
+            * @shape3d회전
+            * 스크롤할때 한바퀴 회전하는 shape 구현
+            * @텍스트fill모션
+            * background-position-X로 0%부터100%까지 채워지는 모션
+            */
+             gsap.set('.sc-works .shape-box',{opacity:0,rotate:360, rotateY:180, scale:3})
+             worksPinMo = gsap.timeline({
+                 scrollTrigger:{
+                     trigger:".sc-works",
+                     start:"-50%",
+                     end:"50%",
+                     scrub:1,
+                 },
+             })
+             worksPinMo
+             .addLabel('a')
+             .to('.sc-works .shape-box',{opacity:1,rotate:0, rotateY:0, scale:1},'a')
+             .to('.sc-works .title',{backgroundPositionX:'0%'},'a')
         },
         // all
         "all": function() {
@@ -114,7 +156,7 @@ $(function(){
             })
             bdboxMotion
             .addLabel('a')
-            .to('.sc-banner',{x:-1000},'a')
+            .to('.sc-banner p',{x:-1000},'a')
             .from('.sc-intro .boder-scroll',{y:-1000},'a')
                 /**
                  * @지정된위치이동
@@ -168,48 +210,12 @@ $(function(){
             
             
                 
-                /**
-                 * @shape3d회전
-                 * 스크롤할때 한바퀴 회전하는 shape 구현
-                 * @텍스트fill모션
-                 * background-position-X로 0%부터100%까지 채워지는 모션
-                 */
-                gsap.set('.sc-works .shape-box',{opacity:0,rotate:360, rotateY:180, scale:3})
-                worksPin = gsap.timeline({
-                    scrollTrigger:{
-                        trigger:".sc-works",
-                        start:"0%",
-                        end:"100%",
-                        scrub:0,
-                        pin:true,
-                    }
-                })
-                worksPin
-                .addLabel('a')
-                .to('.sc-works .shape-box',{opacity:1,rotate:0, rotateY:0, scale:1},'a')
-                .to('.sc-works .title',{backgroundPositionX:'0%'},'a')
+                
             
                 
                 
 
-                /**
-                 * @화면스크롤고정
-                 * 위 영역(.sc-about) 뒤에 숨어있다가 스크롤하면 나타나기
-                 */
-                gsap.set('.sc-works .text-box',{
-                    y:-800
-                })
-                gsap.to('.sc-works .text-box',{
-                    scrollTrigger:{
-                        trigger:".sc-works",
-                        start:"0% 100%",
-                        end:"0% 0%",
-                        scrub:0,
-                    },
-                    ease:'none',
-                    y:0,
-                    
-                })
+                
             
         }
     }); 

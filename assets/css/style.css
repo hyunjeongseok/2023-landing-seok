@@ -353,13 +353,8 @@ img {
   line-height: 1;
   font-size: 7vw;
   font-weight: 700;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   text-transform: uppercase;
-}
-@media (max-width: 1200px) {
-  .footer .top-area .title {
-    padding-bottom: 30px;
-  }
 }
 @media (max-width: 767px) {
   .footer .top-area .title {
@@ -424,17 +419,14 @@ img {
 
 .hidden-wrapper {
   overflow: hidden;
-  z-index: 100;
 }
 
 .sc-intro {
   overflow: hidden;
   position: relative;
-  width: 100vw;
   height: 100vh;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
-  background: #efeedf;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
 }
 @media (max-width: 1200px) {
   .sc-intro {
@@ -624,22 +616,34 @@ img {
 }
 
 .sc-banner {
-  z-index: 10;
-  background: #efeedf;
+  position: relative;
+  bottom: 10vh;
+  left: 0px;
   width: 100vw;
+  z-index: 100;
 }
 @media (max-width: 1200px) {
   .sc-banner {
+    bottom: 0;
+  }
+}
+.sc-banner .banner-wrapper {
+  background: #EFEEDF;
+  position: relative;
+  transform: rotate(-5deg);
+}
+@media (max-width: 1200px) {
+  .sc-banner .banner-wrapper {
     transform: rotate(0deg);
   }
 }
 .sc-banner .banner-wrapper p {
-  width: 500vw;
-  background: #EFEEDF;
+  white-space: nowrap;
+  padding-left: 100px;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
-  padding-left: 100px;
-  white-space: nowrap;
+  background: #EFEEDF;
+  width: 600%;
 }
 .sc-banner .banner-wrapper p span {
   font-weight: 600;
@@ -827,7 +831,6 @@ img {
 }
 @media (max-width: 1200px) {
   .sc-project .works-area .thumb-box {
-    height: 100%;
     border-bottom: 0;
   }
 }
@@ -894,7 +897,7 @@ img {
   top: 31px;
   left: 0;
   width: 20vw;
-  height: 335px;
+  height: 380px;
   padding: 0 20px;
   display: flex;
   flex-direction: column;

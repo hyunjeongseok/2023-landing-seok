@@ -28,11 +28,8 @@
             line-height: 1;
             font-size: 7vw;
             font-weight: 700;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
             text-transform: uppercase;
-            @include desktop{
-                padding-bottom: 30px;
-            }
             @include mobile{
                 padding-bottom: 15px;
                 font-size: 25px;
