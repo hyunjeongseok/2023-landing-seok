@@ -10,10 +10,8 @@
 .sc-intro{
     overflow: hidden;
     position: relative;
-    // width: 100vw;
     height: 100vh;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-    // background: #efeedf;
     @include desktop{
         clip-path: none;
     }
