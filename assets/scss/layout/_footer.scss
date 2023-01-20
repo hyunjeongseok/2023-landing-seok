@@ -1,0 +1,89 @@
+.footer{
+    background: #000;
+    color: #EFEEDF;
+    padding: 18vh 5vw 10vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    @include mobile{
+        height: 80vh;
+        padding: 80px 20px 30px;
+    }
+    .top-area{
+        padding-bottom: 12vh;
+        @include tablet{
+            padding-top: 9vh;
+        }
+        @include mobile{
+            padding-top: 0;
+            padding-bottom: 15vh;
+        }
+        .title{
+            line-height: 1;
+            font-size: 7vw;
+            font-weight: 700;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            @include desktop{
+                padding-bottom: 30px;
+            }
+            @include mobile{
+                padding-bottom: 15px;
+                font-size: 25px;
+                line-height: 1.2;
+            }
+        }
+        .desc{
+            padding-left: 0.5vw;
+            font-size: 2vw;
+            line-height: 1.5;
+            @include mobile{
+                font-size: 12px;
+                font-size: 1vw;
+            }
+        }
+        
+    }
+    .bottom-area{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include tablet{
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
+        .ris-box{
+            @include mobile{
+                font-size: 10px;
+            }
+        }
+        .site-box{
+            display: flex;
+            gap: 1.5vw;
+            .link-site{
+                position: relative;
+                display: block;
+                border: 1px solid #EFEEDF;
+                border-radius: 100px;
+                padding: 5px 10px;
+                @include mobile{
+                    font-size: 12px;
+                }
+                &:hover{
+                    transition: .3s;
+                    background: #EFEEDF;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+
+  

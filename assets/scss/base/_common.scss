@@ -1,0 +1,29 @@
+.blind{
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+img{
+    width: 100%; 
+}
+
+.overlay{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/body-bg.webp');
+    background-position: 0 0;
+    background-size: 2000px;
+    opacity: 0.22;
+    pointer-events: none;
+    z-index: 400;
+}
+
+

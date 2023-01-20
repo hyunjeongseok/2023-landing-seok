@@ -1,0 +1,44 @@
+@mixin ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin multi-ellip($line,$lineheight) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: $lineheight;
+    max-height: $lineheight*$line;
+    display: -webkit-box;
+    -webkit-line-clamp: $line; 
+    -webkit-box-orient: vertical;
+}
+
+
+$mobile: 767px; //320
+$tablet: 1023px; // 768
+$desktop: 1200px; //1024
+
+/*반응형, 브라우저 크기가 767px 이하일때*/
+@mixin mobile{
+  @media (max-width: $mobile){
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 768이상, 1023px 이하일때*/
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+@mixin desktop{
+  @media (max-width: $desktop){
+    @content;
+  }
+}
+
+
+

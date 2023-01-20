@@ -1,0 +1,55 @@
+.header{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 3vw;
+    z-index: 500;
+    @include desktop{
+        display: none;
+    }
+    .logo{
+        a{
+            display: block;
+            height: 25%;
+            width: 25%;
+            @include mobile{
+                width: 50px;
+                height: 50px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+
+    }
+}
+.gnb{
+    .gnb-list{
+        display: flex;
+        gap: 3vw;
+        @include mobile{
+            gap: 5vw;
+        }
+    }
+    .gnb-item{
+        a{
+            display: block;
+            @include mobile{
+                font-size: 13px;
+            }
+            &:hover{
+                transition: .3s;
+                transform-style: preserve-3d;
+                transform: rotate3d(5,10,3, -30deg);
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+
+
