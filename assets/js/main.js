@@ -41,7 +41,6 @@ $(function(){
                     start:"20% 0%",
                     end:"80% 0%",
                     scrub:0,
-                    markers:true
                 },
                 yPercent:40,
                 stagger:{
