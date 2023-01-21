@@ -832,6 +832,7 @@ img {
 @media (max-width: 1200px) {
   .sc-project .works-area .thumb-box {
     border-bottom: 0;
+    height: 100%;
   }
 }
 .sc-project .works-area .thumb {

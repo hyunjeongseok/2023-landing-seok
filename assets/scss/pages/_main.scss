@@ -381,6 +381,7 @@
             border: 2px solid #000;
             @include desktop{
                 border-bottom: 0;
+                height: 100%;
             }
             @include mobile{
                 
