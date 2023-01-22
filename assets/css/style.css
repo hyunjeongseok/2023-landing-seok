@@ -319,6 +319,8 @@ img {
 }
 @media (max-width: 1023px) {
   .footer {
+    padding: 0;
+    position: relative;
     align-items: center;
     text-align: center;
   }
@@ -328,13 +330,10 @@ img {
 }
 @media (max-width: 1023px) {
   .footer .top-area {
-    padding-top: 5vh;
-  }
-}
-@media (max-width: 767px) {
-  .footer .top-area {
-    padding-top: 0;
-    padding-bottom: 15vh;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    padding-bottom: 0;
   }
 }
 .footer .top-area .title {
@@ -361,7 +360,7 @@ img {
   font-size: 2vw;
   line-height: 1.5;
 }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .footer .top-area .desc {
     font-size: 3vw;
   }
@@ -373,6 +372,9 @@ img {
 }
 @media (max-width: 1023px) {
   .footer .bottom-area {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
     flex-direction: column-reverse;
     gap: 20px;
   }

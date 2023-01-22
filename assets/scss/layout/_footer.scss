@@ -7,17 +7,18 @@
     flex-direction: column;
     justify-content: space-between;
     @include tablet{
+        padding: 0;
+        position: relative;
         align-items: center;
         text-align: center;
     }
     .top-area{
         padding-bottom: 12vh;
         @include tablet{
-            padding-top: 5vh;
-        }
-        @include mobile{
-            padding-top: 0;
-            padding-bottom: 15vh;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-60%);
+            padding-bottom: 0;
         }
         .title{
             line-height: 1;
@@ -38,7 +39,7 @@
             padding-left: 0.5vw;
             font-size: 2vw;
             line-height: 1.5;
-            @include tablet{
+            @include mobile{
                 font-size: 3vw;
                 
             }
@@ -50,6 +51,9 @@
         align-items: center;
         justify-content: space-between;
         @include tablet{
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 30px;
             flex-direction: column-reverse;
             gap: 20px;
         }
