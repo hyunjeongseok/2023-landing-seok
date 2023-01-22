@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1vh 3vw;
-    z-index: 500;
+    z-index: 2000;
     @include desktop{
         display: none;
     }

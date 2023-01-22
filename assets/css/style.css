@@ -103,7 +103,7 @@ img {
   background-size: 2000px;
   opacity: 0.22;
   pointer-events: none;
-  z-index: 400;
+  z-index: 1000;
 }
 
 @-webkit-keyframes h {
@@ -262,7 +262,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 1vh 3vw;
-  z-index: 500;
+  z-index: 2000;
 }
 @media (max-width: 1200px) {
   .header {
@@ -684,6 +684,7 @@ img {
 }
 
 .sc-works {
+  overflow: hidden;
   position: relative;
   height: 100vh;
   z-index: -30;
