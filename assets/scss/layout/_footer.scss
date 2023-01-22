@@ -1,7 +1,7 @@
 .footer{
     background: #000;
     color: #EFEEDF;
-    padding: 18vh 5vw 10vh;
+    padding: 18vh 5vw 5vh;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -9,16 +9,11 @@
     @include tablet{
         align-items: center;
         text-align: center;
-        justify-content: center;
-    }
-    @include mobile{
-        height: 80vh;
-        padding: 80px 20px 30px;
     }
     .top-area{
         padding-bottom: 12vh;
         @include tablet{
-            padding-top: 9vh;
+            padding-top: 5vh;
         }
         @include mobile{
             padding-top: 0;
@@ -30,9 +25,12 @@
             font-weight: 700;
             padding-bottom: 30px;
             text-transform: uppercase;
+            @include tablet{
+                font-size: 9vw;
+                line-height: 1.1;
+            }
             @include mobile{
                 padding-bottom: 15px;
-                font-size: 25px;
                 line-height: 1.2;
             }
         }
@@ -40,9 +38,9 @@
             padding-left: 0.5vw;
             font-size: 2vw;
             line-height: 1.5;
-            @include mobile{
-                font-size: 12px;
-                font-size: 1vw;
+            @include tablet{
+                font-size: 3vw;
+                
             }
         }
         

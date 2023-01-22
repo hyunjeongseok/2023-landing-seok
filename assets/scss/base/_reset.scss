@@ -8,7 +8,7 @@ a {text-decoration:none}
 table {border-collapse:collapse;border-spacing:0}
 ul{list-style: none;}
 
-
+html{overflow-x: hidden;}
 body{
     position: relative;
     font-family: 'Montserrat','noto sans kr','noto sans kr ie','apple sd gothic neo','맑은 고딕','malgun gothic',sans-serif;
@@ -16,16 +16,7 @@ body{
     font-size: 14px;
     background-color: #EFEEDF;
     min-width: 0;
-    &::after{
-        content: '';
-        position: absolute;
-        top: 0; left: 0;
-        background-image: url('../images/body-bg.webp');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-
-    }
+    width: 100vw;
 }
 
 

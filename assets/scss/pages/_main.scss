@@ -471,9 +471,6 @@
                 padding-bottom: 30px;
                 display: inline;
                 @include desktop{
-                    font-size: 16px;
-                }
-                @include desktop{
                     font-size: 14px;
                 }
             }
